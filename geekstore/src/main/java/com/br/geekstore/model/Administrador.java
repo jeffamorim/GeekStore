@@ -6,7 +6,6 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import java.util.Date;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -14,14 +13,13 @@ import java.util.Date;
 @Getter
 @Setter
 @Entity
-public class CarrinhoCompras {
+public class Administrador {
 
     @Id
-    private int id;
-    private int quantidade;
-    private Date dataAdicionado;
+    private int matricula;
+    private String email;
     @ManyToOne
-    @JoinColumn(name = "cpf_cliente_cpf")
-    private Cliente cpfCliente;
+    @JoinColumn(name = "administrador_id")
+    private Usuario administrador;
 
 }
